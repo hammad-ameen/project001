@@ -38,5 +38,5 @@ jobs:
 
       - name: Deploying Surge app
 #         run: surge ./build basic-react-for-bootcamp.surge.sh --token ${{sercets.ReactToken}} 
-        run: surge ./build basic-react-for-bootcamp.surge.sh --token ${{secrets.ReactToken}}
+        run: surge ./ basic-react-for-bootcamp.surge.sh --token ${{secrets.ReactToken}}
 
