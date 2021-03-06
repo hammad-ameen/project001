@@ -31,12 +31,13 @@ jobs:
             cmd: install
             
       - name: Build Yarn and npm
-        uses: linchpin/action-build-yarn-npm@master   
+        run: yarn build
+#         uses: linchpin/action-build-yarn-npm@master   
            
       - name: Installing Surge
         run: npm install --global surge
 
       - name: Deploying Surge app
 #         run: surge ./build basic-react-for-bootcamp.surge.sh --token ${{sercets.ReactToken}} 
-        run: surge ./ basic-react-for-bootcamp.surge.sh --token ${{secrets.ReactToken}}
+        run: surge ./build basic-react-for-bootcamp.surge.sh --token ${{secrets.ReactToken}}
 
