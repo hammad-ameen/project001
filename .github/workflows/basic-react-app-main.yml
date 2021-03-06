@@ -37,5 +37,5 @@ jobs:
         run: npm install --global surge
 
       - name: Deploying Surge app
-        run: surge ./build http://basic-react-for-bootcamp.surge.sh --token{{.sercets.ReactToken}} 
+        run: surge ./build http://basic-react-for-bootcamp.surge.sh --token ${{.sercets.ReactToken}} 
 
